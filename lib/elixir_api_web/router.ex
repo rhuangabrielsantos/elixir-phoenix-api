@@ -7,6 +7,7 @@ defmodule ElixirApiWeb.Router do
 
   scope "/api", ElixirApiWeb do
     pipe_through :api
+    resources "/businesses", BusinessController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
